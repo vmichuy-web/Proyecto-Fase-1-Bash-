@@ -25,7 +25,7 @@ while [[ $correr == "true" ]]; do
 	read -p "Opción elegida: " opcion
 	case $opcion in
 		1) mkdir "$HOME/EPNro1"
-		   cp "$HOME/consolidar.sh" "$HOME/EPNro1/consolidar.sh"
+		   cp "./consolidar.sh" "$HOME/EPNro1/consolidar.sh"
 	   	   mkdir "$HOME/EPNro1/entrada"
 		   mkdir "$HOME/EPNro1/salida"
 		   mkdir "$HOME/EPNro1/procesado"
