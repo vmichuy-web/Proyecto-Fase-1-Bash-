@@ -1,0 +1,9 @@
+122425 Juan Fernandez jfernandez@fi.uba.ar 10 
+122432 Carla Fernandez cfernandez@fi.uba.ar 9 
+122434 Francisco Fernandez ffernandez@fi.uba.ar 8 
+122437 Rosa Fernandez rfernandez@fi.uba.ar 6 
+122441 Lucio Alvarez lalvarez@fi.uba.ar 2 
+105892 Maria Gomez mgomez@fi.uba.ar 8 
+98451 Agustin Rossi arossi@fi.uba.ar 3 
+114320 Sofia Martinez smartinez@fi.uba.ar 7 
+88123 Mateo Torres mtorres@fi.uba.ar 10
