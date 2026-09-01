@@ -29,37 +29,40 @@ while [[ $correr == "true" ]]; do
 	   	   mkdir "$HOME/EPNro1/entrada"
 		   mkdir "$HOME/EPNro1/salida"
 		   mkdir "$HOME/EPNro1/procesado"
-		   echo "Entorno creado" ;;
+		   echo -e "Entorno creado\n" ;;
 
 		2) bash "$HOME/EPNro1/consolidar.sh" &  #&: background
-		   echo "Corriendo proceso" ;;
+		   echo -e "Corriendo proceso\n" ;;
 
 		3) if [[ -f $archivo ]]; then
 			sort -t" " -k1,1 -n $archivo
+			echo -e "\n"
 		   else
-			echo "El archivo $FILENAME no existe."
+			echo -e"El archivo $FILENAME no existe.\n"
    		   fi ;;
 
 		4) if [[ -f $archivo ]]; then
-    			sort -k5,5 -n -r $archivo | head -n 10    #-r reverso. -k5 usa la columna 5 para ordenar, n (numérico). head lee las 10 prim. notas. 
-                   else
-                        echo "El archivo $FILENAME no existe."
-                   fi ;;
+    			sort -k5,5 -n -r $archivo | head -n 10    #-r reverso. -k5 usa la columna 5 para ordenar, n (numérico). head lee las 10 prim. notas.
+				echo -e "\n" 
+            else
+                echo -e "El archivo $FILENAME no existe.\n"
+            fi ;;
 
 		5) if [[ -f "$archivo" ]]; then
-			read -p  "Ingrese un numero de padron: " PADRON
-			resultado=$(grep -w "^$PADRON" "$archivo")
+				read -p  "Ingrese un numero de padron: " PADRON
+				resultado=$(grep -w "^$PADRON" "$archivo")
 
-			if [[ -n "$resultado" ]]; then
-				echo "$resultado"
-			else
-				echo "No se encontró el padrón $PADRON"
-			fi
+			  	if [[ -n "$resultado" ]]; then
+					echo -e "$resultado\n"
+				else
+					echo -e "No se encontró el padrón $PADRON\n"
+				fi
    		   else
-			echo "El archivo $FILENAME no existe en la carpeta de salida"
+				echo -e "El archivo $FILENAME no existe en la carpeta de salida\n"
 		   fi ;;
 
-		6) cat "$HOME/EPNro1/procesado.log" ;;
+		6) cat "$HOME/EPNro1/procesado.log" 
+		   echo -e "\n";;
 
 		7) correr="false"
 		    exit 0 ;;
